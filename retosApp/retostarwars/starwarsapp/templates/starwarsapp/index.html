@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Enciclopedia Star Wars</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+    </head>
+    <body style="background-image: url('https://fondosmil.com/fondo/23646.jpg');">
+        <nav class="row" style="background: black; color: white;">
+            <h4 class="col-md-3"></h4>
+        </nav>
+        <div class="container">
+            <br/>
+            <div class="row" style="color: white;">
+                <div class="col-md-12" >
+                    <h4>Listado de Personajes</h4>
+                </div>
+            </div>
+            <br/>
+            {%for personaje in listaPersonajes%}
+            <div class="card-deck">
+                <!--div class="col-sm-12 "-->
+                    <div class="card bg-primary mb-2 text-center" style="width: 18rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{personaje.nombre}}</h5>
+                            <p class="card-text">
+                                fecha de Nacimiento:{{ personaje.fechaNacimiento }}<br>
+                                peso:{{ personaje.peso }}<br>
+                                altura:{{ personaje.altura }}<br>
+                            </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href={% url 'detalle' nombre=personaje.nombre %} class="btn btn-primary text-muted">Go somewhere</a>
+                        </div>
+                    </div>
+                <!--/div-->                   
+            </div>      
+            {%endfor%}   
+        </div>
+        <nav aria-label="...">
+            <ul class="pager">
+              <li><a href={% url 'paginacion' pagina=previousPag %}>Previo</a></li>
+              <li><a href={% url 'paginacion' pagina=nextPag %}>Siguiente</a></li>
+            </ul>
+          </nav>
+    </body>
+</html>
+
+

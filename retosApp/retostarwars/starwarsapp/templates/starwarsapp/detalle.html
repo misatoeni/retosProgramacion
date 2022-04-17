@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Enciclopedia Star Wars</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+      
+    </head>
+    <body style="background-image: url('https://fondosmil.com/fondo/23646.jpg');">
+        <nav class="row" style="background: black; color: white;">
+            <h4 class="col-md-3"></h4>
+        </nav>
+        <div class="container">
+            <br/>
+            <div class="row" style="color: white;">
+                <div class="col-md-12" >
+                    <h4>Detalle Personaje</h4>
+                </div>
+            </div>
+            <br/>
+            <div  class="panel panel-info">
+                <div class="panel-heading">
+                    <h2 class="text-primary">{{nombre}}</h2>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> fecha de Nacimiento: {{fechaNacimiento }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> peso: {{ peso }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> altura: {{ altura }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> genero: {{ genero }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> color de cabello: {{ colorCabello }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary"> color de ojos: {{ colorOjos }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary">color de piel: {{ colorPiel }}</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <h4 class="text-primary">planeta de origen: {{ planetaOrigen }}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-footer">
+                    <a href="{{request.META.HTTP_REFERER|escape}}" class="btn btn-primary text-muted">Regresar</a>
+                </div>
+            </div>
+           
+        </div>
+    </body>
+</html>
+
